@@ -2,8 +2,8 @@ import csv
 import json
 
 INPUT_CSV = 'israel-public-transportation/stops.txt'
-OUTPUT_JSON = 'output.json'
-PRETTY = True
+OUTPUT_JSON = 'output.geojson'
+PRETTY = False
 
 
 class GeoJson:
@@ -30,7 +30,7 @@ class Feature:
 class PointGeometry:
     def __init__(self, lat, lng):
         self.type = "Point"
-        self.coordinates = [lat, lng]
+        self.coordinates = [lng, lat]
 
 
 class Properties:
